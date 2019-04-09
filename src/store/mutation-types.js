@@ -1,0 +1,6 @@
+export const SIDEBAR_DISPLAY = 'SIDEBAR_DISPLAY'
+export const SIDELIST_DISPLAY = 'SIDELIST_DISPLAY'
+export const CREATE_MENU = 'CREATE_MENU'
+export const GET_HEAD = 'GET_HEAD'
+export const GET_BODY = 'GET_BODY'
+export const PRINT_DATA = 'PRINT_DATA'

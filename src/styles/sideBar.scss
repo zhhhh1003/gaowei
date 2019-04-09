@@ -1,0 +1,79 @@
+// 侧边栏
+@import "src/styles/common.scss";
+.sidebar-container>.el-menu {
+  width: 100%!important;
+  min-height: 100%;
+}
+
+.hideSidebar .el-submenu>.el-submenu__title,
+.hideSidebar .submenu-title-noDropdown {
+  padding-left: 8px!important;
+}
+
+.hideSidebar .el-submenu>.el-submenu__title>span {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  display: inline-block;
+}
+
+.hideSidebar .el-menu a:hover .el-submenu>.el-submenu__title>.canHover {
+  width: auto;
+  height: auto;
+  visibility: visible;
+}
+
+.hideSidebar .menu-wrapper>.el-menu-item,
+.hideSidebar .menu-wrapper>.el-submenu .el-submenu__title {
+  text-align: center;
+  background: #333744;
+}
+
+.hideSidebar .el-menu-item .el-submenu__icon-arrow,
+.hideSidebar .el-submenu .el-submenu__title .el-submenu__icon-arrow {
+  display: none;
+}
+
+.el-submenu .el-menu-item {
+  min-width: 180px!important;
+}
+
+.app-wrapper {
+  @include clearfix;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  &.hideSidebar {
+    .sidebar-container{
+      width: 40px;
+      overflow: inherit;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    .main-container {
+      margin-left: 44px;
+    }
+  }
+  .sidebar-container {
+    transition: width 0.28s ease-out;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    // width: 180px;
+    width: 240px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    overflow-y: auto;
+    &::-webkit-scrollbar {display:none}
+  }
+  .main-container {
+    min-height: 100%;
+    transition: margin-left 0.28s ease-out;
+    // margin-left: 184px;
+    margin-left: 244px;
+  }
+}
